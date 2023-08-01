@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Jokes API</title>
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/37ce8de70f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+<nav class="nav">
+  <h1>Random Joke</h1>
+  <div class="div">
+    
+      <a href="#Treasure">Treasure</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    
+  </div>
+</nav>
+
+
+    <div class="content" id="Treasure">
+     
+  
+      <select id="filter" class="form-select" aria-label="Default select example"
+        onchange="changeCategory()">
+      </select>
+      <div class="joke-div">
+        <p class="emoji">😂</p>
+        <p class="category">
+          Category:
+          <span id="category-name"></span>
+        </p>
+        <p class="joke" id="joke"></p>
+        <p>
+          <div id="spinner" class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </p>
+        <button id="next-btn" class="next-btn" type="button" name="button"
+          onclick="nextJoke(event)">
+          New Joke
+        </button>
+      </div>
+      
+<footer>
+  <div id="about" class="about">
+  <p>About Us</p>
+  <div class="ff">
+    <div class="wid">
+      <span>Welcome to Chuck Norris, the leading random joke generator.
+        We are dedicated to spreading laughter and brightening up
+        your day with our collection of hilarious jokes. With
+        our innovative technology and vast database of jokes, we
+        guarantee endless entertainment for all ages.Whether you are
+        looking for a quick chuck or a belly laugh,
+        Chuck Norris is here to deliver the perfect dose
+        of humor. Join us and let the laughter begin!</span>
+    </div>
+    <div class="wid">
+      <img src="R.jpeg" alt="" width="450px " height="450px">
+    </div>
+  </div>
+</div>
+</footer>
+
+<footer >
+  <div class="about" id="contact">
+    
+    <p>Contact Us</p>
+    <div class="ff">
+      <div class="wid">
+        <span>Stay up-to-date with us to spread
+          positivity and happiness
+          Enter your email address in the signup form below
+          to join our community.
+          and receive regular updates delivered straight to your inbox.</span>
+      </div>
+      <div id="col">
+      <form action="action_page.php">
+        <div class="container">
+         
+          
+        </div>
+      
+        <div class="container" style="background-color:white">
+          <input type="text" placeholder="Name" name="name" required>
+          <input type="text" placeholder="Email address" name="mail" required>
+          <input type="text" placeholder="Message" name="message">
+          <label>
+            <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+          </label>
+        </div>
+      
+        <div class="container">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</footer>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
